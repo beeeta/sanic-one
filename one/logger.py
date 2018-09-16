@@ -2,7 +2,7 @@
 import logging
 import datetime
 
-from config import Configer
+from .config import Configer
 
 def get_logger(name):
     today_str = datetime.date.today().strftime('%Y-%m-%d')

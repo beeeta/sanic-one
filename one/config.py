@@ -1,10 +1,13 @@
 
 import configparser
+import os
 
+cur_dir = os.path.dirname(__file__)
+config_path = os.path.abspath(os.path.join(cur_dir,'config.ini'))
 
 class Configer:
     configer = configparser.ConfigParser()
-    configer.read('config.ini')
+    configer.read(config_path)
 
     @classmethod
     def get(cls,section,option):
